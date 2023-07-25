@@ -55,7 +55,6 @@ export default function EditEntry() {
         onChange={handleInputChange}
       />
 
-
       <button
         onClick={(e) => {
           handleSend(e);

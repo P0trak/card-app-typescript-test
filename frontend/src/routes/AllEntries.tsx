@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Entry, EntryContextType } from "../@types/context";
-import { EntryContext } from "../utilities/globalContext";
 import "../styles/themes.css";
+import { EntryContext } from "../utilities/globalContext";
 
 export default function AllEntries() {
   const { entries, deleteEntry } = useContext(EntryContext) as EntryContextType;
