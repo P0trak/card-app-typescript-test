@@ -47,6 +47,14 @@ export default function EditEntry() {
         value={new Date(newEntry.created_at).toISOString().split("T")[0]}
         onChange={handleInputChange}
       />
+      <input
+        className="p-3 rounded-md"
+        type="date"
+        name="scheduled_for"
+        value={new Date(newEntry.scheduled_for).toISOString().split("T")[0]}
+        onChange={handleInputChange}
+      />
+
 
       <button
         onClick={(e) => {
