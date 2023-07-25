@@ -9,8 +9,8 @@ export default function AllEntries(){
     if(entries.length == 0){
         return(
             <section>
-                <h1 className="text-center font-semibold text-2xl m-5">You don't have any card</h1>
-                <p className="text-center font-medium text-md">Lets <Link className="text-blue-400 underline underline-offset-1" to="/create">Create One</Link></p>
+                <h1 className="text-center font-semibold text-2xl m-5">You don't have any cards...</h1>
+                <p className="text-center font-medium text-md">Let's <Link className="text-blue-400 underline underline-offset-1" to="/create">create one!</Link></p>
             </section>
         )
     }
@@ -26,7 +26,8 @@ export default function AllEntries(){
                             <button onClick={()=> {deleteEntry(entry.id as string)}} className="m-1 md:m-2 p-1 font-semibold rounded-md bg-red-500 hover:bg-red-700">✖</button>
                             <button onClick={()=> {navigate(`/edit/${entry.id}`, { replace: true });}} className="m-1 md:m-2 p-1 font-semibold rounded-md bg-blue-500 hover:bg-blue-700">🖊</button>
                         </div>
-                        <time className="text-right text-sm md:text-lg">{new Date(entry.created_at.toString()).toLocaleDateString()}</time>
+                        <time className="text-right text-sm md:text-lg">created at: {new Date(entry.created_at.toString()).toLocaleDateString()}</time>
+                        <time className="text-right text-sm md:text-lg">scheduled for: {new Date(entry.scheduled_for.toString()).toLocaleDateString()}</time>
                         </section>
                         
                     </div>
